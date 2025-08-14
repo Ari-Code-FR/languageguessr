@@ -1,0 +1,128 @@
+/* Minimal style: blanc de fond, boutons carrés noirs */
+:root{
+  --black: #000000;
+  --white: #ffffff;
+  --green: #2ecc71;
+  --red: #e74c3c;
+  --muted: #666;
+}
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{
+  height:100%;
+  margin:0;
+  
+  /* background:var(--white); */
+  color:var(--black)
+}
+#main-screen{
+  background: url("background1.png") rgba(0,0,0,0.2);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+#main-screen{
+  color: var(--white);
+}
+.container{
+  max-width:80%;
+  margin:0 auto;
+
+  padding:20px;
+}
+h1,h2{
+  margin:10px 0
+}
+.modes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:10px;
+  margin-top:16px
+}
+.mode-btn, .square-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:5% 5px;
+  border-radius:4px;
+  text-decoration:none;
+  color:var(--white);
+  background:var(--black);
+  border:0;
+  cursor:pointer
+}
+.square-btn.small{
+  padding:8px 10px;font-size:14px
+}
+.transparent{
+  background-color:rgba(0,0,0,0);
+  color: black;
+}
+.phrase{
+  min-height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid var(--black);
+  padding:12px;
+  font-size:20px;
+  text-align:center;
+  margin-bottom: 5px;
+}
+.choices{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+  margin-top:15px;
+  margin-bottom:10px;
+}
+.choice-btn{
+  background:var(--black);
+  color:var(--white);
+  padding:14px;
+  border:0;cursor:pointer;
+  border-radius:4px;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+}
+.choice-btn.correct{
+  background:var(--green)!important;
+  color:#000;
+}
+.choice-btn.wrong{
+  background:var(--red)!important;
+  color:#000;
+}
+#selectChoice{
+  width: 100%;
+  padding-bottom: 1%;
+}
+.controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+#answer{
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.note{
+  color:var(--muted);
+  margin-top:12px;
+}
+footer{
+  margin-top:30px;
+  color:var(--muted);
+  font-size:14px;
+}
+@media (max-width:420px){
+  .phrase{
+    font-size:18px;
+    min-height:90px}
+}

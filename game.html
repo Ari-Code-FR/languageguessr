@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LanguageGuessr v1</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Icons -->
+   <link rel="stylesheet" 
+   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&
+   icon_names=home,refresh" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+    integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+    integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+<body>
+  <header>
+    <a id="homeBtn" class="transparent square-btn small" href="index.html"><span class="material-symbols-outlined">home</span></a>
+  </header>
+  <main class="container">
+    <h2 id="modeTitle">Mode</h2>
+    <div class="controls">
+      <p id="info" class="note"></p>
+      <button id="restartBtn" class="transparent square-btn small"><span class="material-symbols-outlined">refresh</span></button>
+    </div>
+    <div id="phraseBox" class="phrase">Chargement…</div>
+    <div id="answer"></div>
+    <select id="selectChoice" placeholder="Choisir un language...">
+    </select>
+    <div id="choices" class="choices"></div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
