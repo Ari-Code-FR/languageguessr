@@ -12,6 +12,11 @@
   const restartBtn = document.getElementById('restartBtn');
   const info = document.getElementById('info');
   const answer = document.getElementById('answer');
+  const counter = document.getElementById('counter');
+  counter.innerText = "";
+
+  let corrects = 0;
+  let done = 0;
 
   // Validate mode
   if(!MODES[modeKey]){
@@ -99,6 +104,7 @@
       button.classList.add('correct');
       info.textContent = "Bonne réponse !";
       answer.innerHTML = `<span style='color:green'>${correctLang}</span>`
+      corrects++
     } else {
       button.classList.add('wrong');
       // highlight the correct one
@@ -107,10 +113,13 @@
       info.textContent = "Mauvaise réponse.";
       answer.innerHTML = `<span style='color:red;text-decoration: line-through;'>${chosen}</span><span style='color:green'>${correctLang}</span>`
     }
+    done++
 
     // enable restart
     restartBtn.disabled = false;
     restartBtn.style.opacity = 1;
+
+    counter.innerText = `${corrects} / ${done} (${Math.round(corrects*100/done)}%)`
   }
 
   restartBtn.addEventListener('click', startRound);

@@ -104,6 +104,11 @@ h1,h2{
   justify-content: space-between;
   gap: 10px;
 }
+.controls > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 #answer{
   margin-top: 0;
   display: flex;
@@ -114,7 +119,7 @@ h1,h2{
 }
 .note{
   color:var(--muted);
-  margin-top:12px;
+
 }
 footer{
   margin-top:30px;
@@ -125,4 +130,8 @@ footer{
   .phrase{
     font-size:18px;
     min-height:90px}
+}
+
+.selectize-control .selectize-input {
+    font-size: 16px;
 }
